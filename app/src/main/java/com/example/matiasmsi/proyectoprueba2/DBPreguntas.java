@@ -3,6 +3,7 @@ package com.example.matiasmsi.proyectoprueba2;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by NoBuNaGa on 10/11/2016.
@@ -16,8 +17,10 @@ public class DBPreguntas extends SQLiteOpenHelper {
 
 
 
+
     public DBPreguntas(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
+        Log.d("hola","estoy en bd");
     }
 
 
@@ -36,3 +39,6 @@ public class DBPreguntas extends SQLiteOpenHelper {
 
 
 }
+
+
+
