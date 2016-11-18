@@ -1,10 +1,14 @@
 package com.example.matiasmsi.proyectoprueba2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
@@ -27,11 +31,36 @@ import static android.R.attr.value;
  */
 
 public class Receptor extends Activity {
-    protected void onCreate(final Bundle savedInstanceState) {
-        Log.d("hola", "estoy en Formularionet");
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+
+
+        ListView listView;
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vistanet);
+
+        listView = (ListView) findViewById(R.id.listanet);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ConsulaTareas());
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), Formulario.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
     }
+
 
 
     public Integer ID_REG;
@@ -83,8 +112,9 @@ public class Receptor extends Activity {
         return Estaddo;
     }
 
-    public ArrayList ConsulaTareasI() {
-        final ArrayList lista = new ArrayList();
+    public ArrayList ConsulaTareas() {
+
+         final ArrayList lista = new ArrayList();
 
 
                 String NAMESPACE = "http://tempuri.org/";
