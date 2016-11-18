@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             ListView listView;
-            String[] obras = {"Obra1", "Obra2", "Obra3", "Obra4", "Obra5"};
+            String[] obras = {"Obra1", "Obra2", "Obra3", "Obra4", "Obra5","Obra6"};
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);

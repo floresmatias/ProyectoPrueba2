@@ -3,6 +3,7 @@ package com.example.matiasmsi.proyectoprueba2;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -25,7 +26,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
     RadioGroup radioGroup1, radioGroup2, radioGroup3, radioGroup4, radioGroup5, radioGroup6, radioGroup7, radioGroup8, radioGroup9;
     String[] respuestas = new String[9];
     String pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9;
-    Button btn,btn2;
+    Button btn,btn2,btn3;
     CompruebaRed cd;
 //chupalo
     Context editText;
@@ -187,6 +188,8 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         btn.setOnClickListener(this);
         btn2 = (Button) findViewById(R.id.btnConexion);
         btn2.setOnClickListener(this);
+        btn3 = (Button) findViewById(R.id.btnVista2);
+        btn3.setOnClickListener(this);
         //new CompruebaRed.AsyncConnectTask().execute();
     }
 
@@ -477,7 +480,9 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
 
 
                 break;
-            case R.id.btnJason:
+            case R.id.btnVista2:
+                Intent intent = new Intent(getApplicationContext(), Receptor.class);
+                startActivity(intent);
 
                 break;
             case R.id.btnConexion:

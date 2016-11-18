@@ -39,6 +39,7 @@ public class Receptor extends Activity {
 
 
         ListView listView;
+        String[] obras = {"Obra1", "Obra2", "Obra3", "Obra4", "Obra5","Obra6"};
 
 
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class Receptor extends Activity {
 
         listView = (ListView) findViewById(R.id.listanet);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ConsulaTareas());
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, obras);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -136,6 +137,10 @@ public class Receptor extends Activity {
                     transporte.call(SOAP_ACTION, envelope);
                     SoapObject resSoap = (SoapObject) envelope.getResponse();
                     int nPropiedades = resSoap.getPropertyCount();
+                    ID_REG=1;
+                    INSPECTOR="Curbis";
+                    OBRA="Curbis";
+                    SECTOR="";
                     for (int i = 0; i < nPropiedades; i++) {
                         SoapObject ic = (SoapObject) resSoap.getProperty(i);
                         lista.add(new Receptor(
