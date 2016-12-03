@@ -49,6 +49,7 @@ public class CompruebaRed extends AppCompatActivity {
         Log.d("estado","no conectado");
 
         return false;
+        //84
 
     }
 

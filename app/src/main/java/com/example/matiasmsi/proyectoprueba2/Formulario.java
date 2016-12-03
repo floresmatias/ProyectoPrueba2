@@ -28,7 +28,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
     RadioGroup radioGroup1, radioGroup2, radioGroup3, radioGroup4, radioGroup5, radioGroup6, radioGroup7, radioGroup8, radioGroup9;
     String[] respuestas = new String[9];
     String pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9;
-    Button btn,btn2,btn3;
+    Button btn,btn2,btn3,btn4;
     Pruebared cd;
     TextView resultado;
 //chupalo
@@ -193,12 +193,13 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         btn2.setOnClickListener(this);
         btn3 = (Button) findViewById(R.id.btnVista2);
         btn3.setOnClickListener(this);
+        btn4 = (Button) findViewById(R.id.btnJason);
+        btn4.setOnClickListener(this);
         //new CompruebaRed.AsyncConnectTask().execute();
 
         resultado=(TextView) findViewById(R.id.txtResultado);
 
-        Transmisor transmisor = new Transmisor();
-        transmisor.run();
+
         Resultado rs=new Resultado();
 
         resultado.setText(rs.getResultado());
@@ -503,6 +504,9 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
                     Toast.makeText(Formulario.this,"no conectado",Toast.LENGTH_SHORT).show();
                 }
                 break;
+            case R.id.btnJason:
+                Transmisor transmisor = new Transmisor();
+                transmisor.run();
         }
 
     }
