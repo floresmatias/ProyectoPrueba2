@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
             ListView listView;
             String[] obras = {"Obra1", "Obra2", "Obra3", "Obra4", "Obra5","Obra6"};
+
 
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
@@ -36,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-            Transmisor transmisor = new Transmisor();
-            transmisor.run();
+
+
 
         }
 
-    }
+
+
+}
 

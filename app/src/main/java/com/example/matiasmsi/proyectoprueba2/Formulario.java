@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.CollationElementIterator;
@@ -23,11 +24,13 @@ import java.util.Arrays;
 
 public class Formulario extends AppCompatActivity implements View.OnClickListener {
 
+
     RadioGroup radioGroup1, radioGroup2, radioGroup3, radioGroup4, radioGroup5, radioGroup6, radioGroup7, radioGroup8, radioGroup9;
     String[] respuestas = new String[9];
     String pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9;
     Button btn,btn2,btn3;
     Pruebared cd;
+    TextView resultado;
 //chupalo
     Context editText;
     private CollationElementIterator textview;
@@ -191,6 +194,14 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         btn3 = (Button) findViewById(R.id.btnVista2);
         btn3.setOnClickListener(this);
         //new CompruebaRed.AsyncConnectTask().execute();
+
+        resultado=(TextView) findViewById(R.id.txtResultado);
+
+        Transmisor transmisor = new Transmisor();
+        transmisor.run();
+        Resultado rs=new Resultado();
+
+        resultado.setText(rs.getResultado());
     }
 
 

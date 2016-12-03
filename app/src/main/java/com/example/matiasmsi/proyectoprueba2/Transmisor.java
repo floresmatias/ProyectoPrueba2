@@ -25,6 +25,7 @@ import static android.R.attr.value;
 
 public class Transmisor {
 
+    Resultado resultado = new Resultado();
 
         //@Override
         public void run() {
@@ -38,7 +39,7 @@ public class Transmisor {
 
 
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-            request.addProperty("CADENA","1,1,COMENTARIO,SI,SI,SI,SI,COMENTARIO,SI,SI,COMENTARIOS");
+            request.addProperty("CADENA","1,1,COMENTARIO,SI,SI,SI,SI,COMENTARIO,SI,SI,COMENTARIOSSSSS");
 
 
 
@@ -54,12 +55,17 @@ public class Transmisor {
                 SoapPrimitive resultado_xml = (SoapPrimitive) envelope.getResponse();
                 String res=resultado_xml.toString();
 
-                if(res.equals("1")) {
+                if(res.equalsIgnoreCase("correcto")) {
+                    resultado.setResultado("ok");
 
+
+                }else {
+                    resultado.setResultado("mentira");
                 }
 
             } catch (Exception e) {
                 e.printStackTrace();
+                resultado.setResultado("Error");
             }
 
 
