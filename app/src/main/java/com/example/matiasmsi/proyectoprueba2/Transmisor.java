@@ -31,6 +31,7 @@ public class Transmisor {
 
     //Formulario ok = new Formulario();
     //Formulario form = new Formulario();
+    //prueba
 
 
     Transmisor.TareaInsertar tareaInsertar = new Transmisor.TareaInsertar();
