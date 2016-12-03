@@ -4,30 +4,20 @@ import android.app.Service;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-
 /**
- * Created by MatiasMSI on 12/11/2016.
+ * Created by MatiasMSI on 18/11/2016.
  */
 
-public class CompruebaRed extends AppCompatActivity {
-    protected void onCreate(final Bundle savedInstanceState) {
-        Log.d("hola", "estoy en Comprueba red");
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-    }
+public class Pruebared {
 
     Context context;
     boolean valor;
 
 
-    public CompruebaRed(Context context) {
+    public Pruebared(Context context) {
         this.context = context;
     }
 
@@ -45,11 +35,10 @@ public class CompruebaRed extends AppCompatActivity {
 
                 }
             }
-    }
+        }
         Log.d("estado","no conectado");
 
         return false;
 
     }
-
 }

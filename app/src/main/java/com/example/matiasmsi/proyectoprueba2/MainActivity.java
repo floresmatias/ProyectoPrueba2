@@ -32,9 +32,12 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
 
 
+
+
                 }
             });
-
+            Transmisor transmisor = new Transmisor();
+            transmisor.run();
 
         }
 

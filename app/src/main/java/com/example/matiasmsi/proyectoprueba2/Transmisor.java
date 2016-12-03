@@ -1,5 +1,6 @@
 package com.example.matiasmsi.proyectoprueba2;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -24,15 +25,22 @@ import static android.R.attr.value;
 
 public class Transmisor {
 
-        @Override
+
+        //@Override
         public void run() {
+            Log.d("hola","estoy en transmisor");
+
             String NAMESPACE = "http://tempuri.org/";
-            String URL = "http://localhost/wsservice/Service.asmx";
+            String URL = "http://181.73.38.61/WSivan2/Service.asmx";
             String METHOD_NAME = "TX_MOBILE";
             String SOAP_ACTION = "http://tempuri.org/TX_MOBILE";
 
+
+
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
-            //request.addProperty("",value);
+            request.addProperty("CADENA","1,1,COMENTARIO,SI,SI,SI,SI,COMENTARIO,SI,SI,COMENTARIOS");
+
+
 
             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
             envelope.dotNet = true;
@@ -43,8 +51,13 @@ public class Transmisor {
 
             try {
                 transporte.call(SOAP_ACTION, envelope);
-                SoapObject resSoap = (SoapObject) envelope.getResponse();
-                int nPropiedades = resSoap.getPropertyCount();
+                SoapPrimitive resultado_xml = (SoapPrimitive) envelope.getResponse();
+                String res=resultado_xml.toString();
+
+                if(res.equals("1")) {
+
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

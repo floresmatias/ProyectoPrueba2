@@ -27,7 +27,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
     String[] respuestas = new String[9];
     String pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9;
     Button btn,btn2,btn3;
-    CompruebaRed cd;
+    Pruebared cd;
 //chupalo
     Context editText;
     private CollationElementIterator textview;
@@ -36,7 +36,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         Log.d("hola","estoy en Formulario");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formulario);
-        cd = new CompruebaRed(this);
+        cd = new Pruebared(this);
 
 
 

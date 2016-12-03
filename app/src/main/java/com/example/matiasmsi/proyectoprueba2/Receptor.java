@@ -120,6 +120,8 @@ public class Receptor extends Activity {
 
                 String NAMESPACE = "http://tempuri.org/";
                 String URL = "http://172.18.19.253/wsservice/Service.asmx";
+                String Usuario = "WS_curbito" ;
+                String Clave = "$$curbito16";
                 String METHOD_NAME = "INS_REPORTE_PUNTO_WEB";
                 String SOAP_ACTION = "http://tempuri.org/INS_REPORTE_PUNTO_WEB";
 
