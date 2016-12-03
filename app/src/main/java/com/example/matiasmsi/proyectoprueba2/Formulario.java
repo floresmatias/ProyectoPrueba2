@@ -31,6 +31,8 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
     Button btn,btn2,btn3,btn4;
     Pruebared cd;
     TextView resultado;
+    EditText Tex;
+    Transmisor transmisor = new Transmisor();
 //chupalo
     Context editText;
     private CollationElementIterator textview;
@@ -203,6 +205,8 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         Resultado rs=new Resultado();
 
         resultado.setText(rs.getResultado());
+        Tex = (EditText) findViewById(R.id.editText);
+
     }
 
 
@@ -504,9 +508,12 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
                     Toast.makeText(Formulario.this,"no conectado",Toast.LENGTH_SHORT).show();
                 }
                 break;
+
             case R.id.btnJason:
-                Transmisor transmisor = new Transmisor();
-                transmisor.run();
+               transmisor.getTareaInsertar().execute();
+
+
+
         }
 
     }
