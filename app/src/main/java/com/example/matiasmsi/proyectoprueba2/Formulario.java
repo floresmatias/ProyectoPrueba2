@@ -61,7 +61,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio1) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta1 = "SI";
+                    pregunta1 = "/SI//";
                     respuestas[0] = pregunta1;
 
                     return;
@@ -76,7 +76,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio3) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta2 = "SI";
+                    pregunta2 = "/SI//";
                     respuestas[1] = pregunta2;
                     return;
                 } else if (i == R.id.radio4) {
@@ -91,7 +91,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio5) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta3 = "SI";
+                    pregunta3 = "/SI//";
                     respuestas[2] = pregunta3;
                     return;
                 } else if (i == R.id.radio6) {
@@ -106,7 +106,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio7) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta4 = "SI";
+                    pregunta4 = "/SI//";
                     respuestas[3] = pregunta4;
                     return;
                 } else if (i == R.id.radio8) {
@@ -120,7 +120,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio9) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta5 = "SI";
+                    pregunta5 = "/SI//";
                     respuestas[4] = pregunta5;
                     return;
                 } else if (i == R.id.radio10) {
@@ -135,7 +135,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio11) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta6 = "SI";
+                    pregunta6 = "/SI//";
                     respuestas[5] = pregunta6;
                     return;
                 } else if (i == R.id.radio12) {
@@ -151,7 +151,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio13) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta7 = "SI";
+                    pregunta7 = "/SI//";
                     respuestas[6] = pregunta7;
                     return;
                 } else if (i == R.id.radio14) {
@@ -166,7 +166,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio15) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta8 = "SI";
+                    pregunta8 = "/SI//";
                     respuestas[7] = pregunta8;
                     return;
                 } else if (i == R.id.radio16) {
@@ -180,7 +180,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == R.id.radio17) {
                     Toast.makeText(getApplicationContext(), "si", Toast.LENGTH_SHORT).show();
-                    pregunta9 = "SI";
+                    pregunta9 = "/SI//";
                     respuestas[8] = pregunta9;
                     return;
                 } else if (i == R.id.radio18) {
@@ -219,7 +219,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta1 = Et_Respuesta.getText().toString().trim();
+                pregunta1 = "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if (pregunta1.length() != 0) {
                     Toast.makeText(Formulario.this, "GRACIAS", Toast.LENGTH_SHORT).show();
                     respuestas[0] = pregunta1;
@@ -247,7 +247,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta2 = Et_Respuesta.getText().toString().trim();
+                pregunta2 ="/"+Et_Respuesta.getText().toString().trim()+"//";
                 if (pregunta2.length() != 0) {
                     Toast.makeText(Formulario.this, "GRACIAS", Toast.LENGTH_SHORT).show();
                     respuestas[1] = pregunta2;
@@ -275,7 +275,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta3 = Et_Respuesta.getText().toString().trim();
+                pregunta3 ="/"+Et_Respuesta.getText().toString().trim()+"//";
                 if (pregunta3.length() != 0) {
                     Toast.makeText(Formulario.this, "GRACIAS", Toast.LENGTH_SHORT).show();
                     respuestas[2] = pregunta3;
@@ -303,7 +303,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta4= Et_Respuesta.getText().toString().trim();
+                pregunta4= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta4.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[3]=pregunta4;
@@ -331,7 +331,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta5= Et_Respuesta.getText().toString().trim();
+                pregunta5= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta5.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[4]=pregunta5;
@@ -359,7 +359,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta6= Et_Respuesta.getText().toString().trim();
+                pregunta6= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta6.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[5]=pregunta6;
@@ -387,7 +387,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta7= Et_Respuesta.getText().toString().trim();
+                pregunta7= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta7.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[6]=pregunta7;
@@ -415,7 +415,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta8= Et_Respuesta.getText().toString().trim();
+                pregunta8= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta8.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[7]=pregunta8;
@@ -443,7 +443,7 @@ public class Formulario extends AppCompatActivity implements View.OnClickListene
         ventana.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                pregunta9= Et_Respuesta.getText().toString().trim();
+                pregunta9= "/"+Et_Respuesta.getText().toString().trim()+"//";
                 if(pregunta9.length()!=0){
                     Toast.makeText(Formulario.this,"GRACIAS",Toast.LENGTH_SHORT).show();
                     respuestas[8]=pregunta9;
